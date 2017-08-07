@@ -1,13 +1,13 @@
 # Description:
-#   Automatically post jira links when issue numbers are seen
+#   Automatically post request tracker links when issue numbers are seen
 #
 # Dependencies:
 #   None
 #
 # Configuration:
-#   HUBOT_JIRA_DOMAIN - domain when your jira instance lives (e.g. "example.atlassian.com")
-#   HUBOT_JIRA_PROJECTS - comma separated list of project prefixes (e.g. "AB,CD,EF")
-#   HUBOT_JIRA_INSECURE - if this is set urls will be prefixed by "http" instead of "https"
+#   HUBOT_RT_DOMAIN - domain when your RT instance lives (e.g. "rt.example.com")
+#   HUBOT_RT_PREFIX - comma separated list of project prefixes (e.g. "RT,IR")
+#   HUBOT_RT_INSECURE - if this is set urls will be prefixed by "http" instead of "https"
 #
 # Commands:
 #   none
@@ -20,16 +20,16 @@
 
 module.exports = (robot) ->
 
-  if process.env.HUBOT_JIRA_INSECURE?
+  if process.env.HUBOT_RT_INSECURE?
     http_proto = 'http://'
   else
     http_proto = 'https://'
 
-  if process.env.HUBOT_JIRA_PROJECTS
+  if process.env.HUBOT_RT_PREFIX
     regex = ///
       (?:^|\s) # start of line or space
-      (#{process.env.HUBOT_JIRA_PROJECTS.split(',').join('|')}) # list of jira project prefixes
-      - # a hyphen
+      (#{process.env.HUBOT_RT_PREFIX.split(',').join('|')}) # list of RT prefixes
+      \s # a space
       (\d+) # one or more digits
       \b # word boundary
       ///i # case insensitive
@@ -37,7 +37,7 @@ module.exports = (robot) ->
     regex = ///
       (?:^|\s) # start of line or space
       ([a-z]+) # one or more letters
-      -
+      \s
       (\d+) # one or more digits
       \b # word boundary
       ///i
@@ -46,6 +46,5 @@ module.exports = (robot) ->
     # return if msg.subtype is 'bot_message'
     project = res.match[1].toUpperCase()
     id = res.match[2]
-    issue = project + '-' + id
-    url = http_proto + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + issue
+    url = http_proto + process.env.HUBOT_RT_DOMAIN + '/Ticket/Display.html?id=' + id
     res.send url
