@@ -6,7 +6,7 @@
 #
 # Configuration:
 #   HUBOT_RT_DOMAIN - domain when your RT instance lives (e.g. "rt.example.com")
-#   HUBOT_RT_PREFIX - comma separated list of project prefixes (e.g. "RT,IR")
+#   HUBOT_RT_PREFIX - comma separated list of project prefixes (e.g. "RT,rt")
 #   HUBOT_RT_INSECURE - if this is set urls will be prefixed by "http" instead of "https"
 #
 # Commands:
@@ -36,7 +36,8 @@ module.exports = (robot) ->
   else
     regex = ///
       (?:^|\s) # start of line or space
-      ([a-z]+) # one or more letters
+      ([rR]) # one r
+      ([tT]) # one t
       \s
       (\d+) # one or more digits
       \b # word boundary
@@ -44,7 +45,7 @@ module.exports = (robot) ->
 
   robot.hear regex, (res) ->
     # return if msg.subtype is 'bot_message'
-    project = res.match[1].toUpperCase()
+    prefix = res.match[1]
     id = res.match[2]
     url = http_proto + process.env.HUBOT_RT_DOMAIN + '/Ticket/Display.html?id=' + id
     res.send url
