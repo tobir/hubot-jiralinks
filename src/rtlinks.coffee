@@ -36,7 +36,7 @@ module.exports = (robot) ->
   else
     regex = ///
       (?:^|\s) # start of line or space
-      ([rt|RT]) # rt or RT
+      (rt|RT) # rt or RT
       \s
       (\d+) # one or more digits
       \b # word boundary
