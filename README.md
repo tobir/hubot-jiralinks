@@ -5,7 +5,7 @@
 
 hubot scipt that recognized request tracker issue numbers and respond with their urls
 
-See [`src/jiralinks.coffee`](src/jiralinks.coffee) for full documentation.
+See [`src/rtlinks.coffee`](src/rtlinks.coffee) for full documentation.
 
 ## Installation
 
@@ -23,10 +23,10 @@ Then add **hubot-rt-links** to your `external-scripts.json`:
 ### Required:
 * `HUBOT_RT_DOMAIN` - domain when your RT instance lives (e.g. "rt.example.com")
 ### Optional:
-* `HUBOT_RT_PREFIX` - comma separated list of project prefixes (e.g. "RT,rt")
+* `HUBOT_RT_PREFIX` - comma separated list of prefixes to call (e.g. "RT,rt")
 * `HUBOT_RT_INSECURE` - if this is set, urls will be prefixed by 'http' instead  of 'https'.
 
-If you don't set `HUBOT_RT_PREFIX`, any pattern of [rR][tT] #### will be linked
+If you don't set `HUBOT_RT_PREFIX`, any pattern of [rRtT] #### will be linked
 
 ## Sample Interaction
 
@@ -37,4 +37,4 @@ hubot>> https://rt.example.com/Ticket/Display.html?id=-1234
 
 ## NPM Module
 
-https://www.npmjs.com/package/hubot-jira-links
+https://www.npmjs.com/package/hubot-rt-links
