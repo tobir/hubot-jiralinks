@@ -26,13 +26,13 @@ Then add **hubot-rt-links** to your `external-scripts.json`:
 * `HUBOT_RT_PREFIX` - comma separated list of prefixes to call (e.g. "RT,rt")
 * `HUBOT_RT_INSECURE` - if this is set, urls will be prefixed by 'http' instead  of 'https'.
 
-If you don't set `HUBOT_RT_PREFIX`, any pattern of [rRtT] #### will be linked
+If you don't set `HUBOT_RT_PREFIX`, any pattern of `rt ####` will be linked
 
 ## Sample Interaction
 
 ```
 user >> rt 1234
-hubot>> https://rt.example.com/Ticket/Display.html?id=-1234
+hubot>> https://rt.example.com/Ticket/Display.html?id=1234
 ```
 
 ## NPM Module
