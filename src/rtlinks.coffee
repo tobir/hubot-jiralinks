@@ -6,7 +6,7 @@
 #
 # Configuration:
 #   HUBOT_RT_DOMAIN - domain when your RT instance lives (e.g. "rt.example.com")
-#   HUBOT_RT_PREFIX - comma separated list of project prefixes (e.g. "RT,rt")
+#   HUBOT_RT_PREFIX - comma separated list of prefixes to call (e.g. "RT,rt")
 #   HUBOT_RT_INSECURE - if this is set urls will be prefixed by "http" instead of "https"
 #
 # Commands:
@@ -16,7 +16,7 @@
 #   None
 #
 # Author:
-#   Brad Clark <bdashrad@gmail.com>
+#   Tobias Ramin <bdashrad@gmail.com>
 
 module.exports = (robot) ->
 
