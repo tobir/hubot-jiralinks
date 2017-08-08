@@ -13,4 +13,4 @@ describe 'rtlinks', ->
     require('../src/rtlinks')(@robot)
 
   it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/(?:^|\s)([rRtT]+)-(\d+)\b/i)
+    expect(@robot.hear).to.have.been.calledWith(/(?:^|\s)([rRtT]+)\s(\d+)\b/i)
