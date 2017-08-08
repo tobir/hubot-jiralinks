@@ -16,7 +16,7 @@
 #   None
 #
 # Author:
-#   Tobias Ramin <bdashrad@gmail.com>
+#   Tobias Ramin <npm@tobir.de>
 
 module.exports = (robot) ->
 
