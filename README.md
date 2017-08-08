@@ -1,6 +1,6 @@
 # hubot-RT-links
 
-[![Build Status](https://travis-ci.org/tobir/hubot-rtlinks.svg?branch=master)](https://travis-ci.org/tobir/hubot-rtlinks)
+[![Build Status](https://travis-ci.org/tobir/hubot-rt-links.svg?branch=master)](https://travis-ci.org/tobir/hubot-rt-links)
 [![npm version](https://badge.fury.io/js/hubot-rt-links.svg)](https://badge.fury.io/js/hubot-rt-links)
 
 hubot scipt that recognized request tracker issue numbers and respond with their urls
