@@ -1,21 +1,22 @@
 {
-  "name": "hubot-jira-links",
-  "description": "recognize jira issue numbers and respond with their urls",
-  "version": "1.0.8",
-  "author": "Brad Clark <bdashrad@gmail.com>",
+  "name": "hubot-rt-links",
+  "description": "recognize request tracker issue numbers and respond with their urls",
+  "version": "0.0.1",
+  "author": "Tobias Ramin <bdashrad@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/bdashrad/hubot-jiralinks#readme",
+  "homepage": "https://github.com/tobir/hubot-rt-links#readme",
   "keywords": [
     "hubot",
     "hubot-scripts",
-    "jira"
+    "request tracker",
+    "rt"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/bdashrad/hubot-jiralinks.git"
+    "url": "git://github.com/tobir/hubot-rt-links.git"
   },
   "bugs": {
-    "url": "https://github.com/bdashrad/hubot-jiralinks/issues"
+    "url": "https://github.com/tobir/hubot-rt-links/issues"
   },
   "dependencies": {
     "coffee-script": "~1.6"
