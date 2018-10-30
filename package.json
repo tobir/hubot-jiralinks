@@ -1,7 +1,7 @@
 {
   "name": "hubot-rt-links",
   "description": "recognize request tracker issue numbers and respond with their urls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Tobias Ramin <npm@tobir.de>",
   "license": "MIT",
   "homepage": "https://github.com/tobir/hubot-rt-links#readme",
