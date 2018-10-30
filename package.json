@@ -22,7 +22,7 @@
     "coffee-script": "~1.6"
   },
   "peerDependencies": {
-    "hubot": "2.x"
+    "hubot": "3.x"
   },
   "devDependencies": {
     "chai": "*",
@@ -30,7 +30,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-mocha-test": "~0.7.0",
     "grunt-release": "~0.6.1",
-    "hubot": "2.x",
+    "hubot": "3.x",
     "matchdep": "~0.1.2",
     "mocha": "*",
     "sinon": "*",
